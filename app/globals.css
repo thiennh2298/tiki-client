@@ -13,11 +13,15 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 217, 100%, 32%;
-    --primary-foreground: 217, 100%, 50%;
+    --primary: 217, 100%, 52%;
+    --primary-foreground: 216.98, 100%, 51.96%, 0.2;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 4% 52%;
+    --secondary-foreground: 240 10% 88%;
+
+    --ghost-white: 240, 33%, 97%;
+    --bright-gray: 240, 14%, 93%;
+    --charcoal: 240, 4%, 16%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -33,6 +37,10 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* utilities */
+    --header-height: 88px;
+    --sidebar-width: 230px;
   }
 
   .dark {
@@ -77,6 +85,15 @@
 
 @layer components {
   .main-header {
-    @apply h-[88px] w-full;
+    @apply h-header w-full;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex flex-row items-center justify-center;
+  }
+  .main-container {
+    @apply max-w-container w-full px-6 mx-auto;
   }
 }
